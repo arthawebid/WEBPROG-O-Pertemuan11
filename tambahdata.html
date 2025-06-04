@@ -49,7 +49,23 @@
 
         async function handleSubmit(){
             event.preventDefault();
+            let dta = new FormData(event.target);
             
+            fetch(event.target,{
+                method: frm.method,
+                body: dta,
+                headers: {
+                    'Accept':'application/json'
+                }
+            } ).then(response =>{
+                if(response.ok){
+                    form.reset();
+                }else{
+                    alert("Ada kendala pengiriman data ke server");
+                }
+            } 
+
+            ).catch(error => alert("Terjadi Error"));
         }
 
         frm.addEventListener("submit", handleSubmit);
