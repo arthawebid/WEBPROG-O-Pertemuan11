@@ -47,6 +47,12 @@
     <script>
         let frm = document.getElementById("formDataMHS")
 
+        async function handleSubmit(){
+            event.preventDefault();
+            
+        }
+
+        frm.addEventListener("submit", handleSubmit);
     </script>
 </body>
 </html>
