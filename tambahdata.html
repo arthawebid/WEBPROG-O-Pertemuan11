@@ -12,7 +12,15 @@
 <body>
     <div class="container">
         <h3>Tambah Data Mahasiswa</h3>
-        <form id="formDataMHS" method="POST" action="http://localhost/pertemuan11/tambahdata.php">
+        
+        <div class="alert alert-primary" id="sukses">
+        Penambahan Data Mahasiswa Sukses    
+        </div> 
+        <div class="alert alert-warning" id="gagal">
+        Penambahan Data Mahasiswa Mengalami kegagalan    
+        </div> 
+
+        <form id="formDataMHS" method="POST" action="">
             <div class="form-group">
                 <label class="form-label">NIM</label>
                 <input class="form-control" type="text" name="txNIM" id="txNIM">
