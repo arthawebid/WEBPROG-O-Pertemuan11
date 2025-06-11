@@ -11,6 +11,7 @@
         $JENISKEL=$_POST["txJK"];
 
         $sql = "INSERT INTO mhs(NIM,NAMA,ALAMAT,TGL_LAHIR,JENISKEL) values('$NIM','$NAMA','$ALAMAT','$TGL','$JENISKEL');";
+        $hsl["sql"] = $sql;
         $hasil = mysqli_query($koneksi,$sql);
         $hsl["affectedrows"] = mysqli_affected_rows($koneksi);
         if($hasil){
